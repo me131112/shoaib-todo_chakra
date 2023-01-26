@@ -1,4 +1,4 @@
-import { MdDelete } from "react-icons/md";
+import { MdDelete, MdOutlineTaskAlt, MdAddTask} from "react-icons/md";
 import { useState } from "react";
 import {
   Button,
@@ -108,7 +108,7 @@ export default function Todos(): JSX.Element {
                   <Badge colorScheme={todo.completed ? "green" : "red"}> 
                   {todo.completed ? "completed" : "incomplete"}
                   </Badge>
-                  <Button size={"sm"} marginX={"5"} onClick = {() => handleToggle(todo.id)}>Status Switch</Button>
+                  <Button leftIcon={<MdOutlineTaskAlt/>} size={"sm"} marginX={"5"} onClick = {() => handleToggle(todo.id)}>Status</Button>
                   <Badge colorScheme={todo.completed ? "green" : "red"}> 
                   </Badge>
                   <Button leftIcon={<MdDelete/>} size={"sm"} onClick = {() => handleDelete(todo.id)}>Delete</Button>
